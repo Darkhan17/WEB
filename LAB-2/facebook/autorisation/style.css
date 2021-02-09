@@ -1,0 +1,191 @@
+
+
+.page{
+	background:#edf0f5;
+	width: auto;
+	margin: 0px;
+}
+
+.main{
+	display: block;
+	position: relative;
+	width: 980px;
+	min-height: 680px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+
+
+.main__information{
+	float: left;
+	width: 580px;
+	padding: 0px;
+}
+.main__img{
+	height: 106px;
+	padding: 112px 0px 0px 0px;
+}
+.main__icon{
+	margin: -28px;
+}
+.main__description{
+	float: left;
+	font-size:18px;
+	font-family: sans-serif;
+	padding-right: 10px;
+}
+
+
+
+.right{
+	padding-top: 60px;
+}
+
+.main__login{
+	display: block;
+	float: left;
+	width: 396px;
+	height: 360px;
+	background: #fff;
+	padding-top: 5px;
+	align-items: center;
+	border-radius: 8px;
+	margin-top: 20px;
+}
+.main__log{
+	text-align: center;
+}
+.main__input{
+	font-family: inherit;
+	font-size: 20px;
+	width: 350px;
+	padding: 15px 0px 15px 15px;
+	border-radius: 6px;
+	margin: 10px;
+	border: 1px solid #dddfe2;
+}
+.login-input{
+	margin: 
+}
+
+.button{
+		cursor: pointer;
+		display: inline-block;
+		transition: 200ms;
+		border-radius: 6px;
+		font-size: 20px;
+		color: #fff;
+		line-height: 48px;
+		padding: 0px 16px;
+}
+.enter-button{
+	background-color:#1877f2;
+	width: 350px;
+	border: 1px solid #dddfe2;
+}
+
+.enter-button:hover{
+	background-color: #166fe5;
+}
+
+.main__login-information{
+	text-align: center;
+	margin-top: 16px;
+	color: #1877f2;
+}
+.main__login-information a{
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.main__line{
+	align-items: center;
+    border-bottom: 1px solid #dadde1;
+    display: flex;
+    margin: 20px 16px;
+    text-align:center
+}
+
+.signup-button{
+	background-color: #42b72a;
+	border: 1px solid #42b72a;
+
+}
+
+.signup-button:hover{
+	background-color: #36a420;;
+}
+
+.main__message{
+	font-size: 15px;
+	font-weight: normal;
+	padding-top: 50px;
+	text-align: center;
+}
+.main__link{
+	color:#1c1e21;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+
+
+
+.class{
+	clear: both;
+}
+
+.class__container{
+	padding-top: 20px;
+	font-family: inherit;
+	display: block;
+}
+
+.class__footer{
+	color: #737373;
+	margin: 0 auto;
+	width: 980px;
+	align-items: center;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.class__footer-header{
+	padding-top: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+}
+
+._sv4{
+	padding-right: 0;
+	padding-left: 10px;
+	color: #8a8d91;
+}
+
+
+.class__line{
+	border-bottom: 2px solid #dddfe2;
+	font-size: 1px;
+	height: 8px;
+	margin-bottom: 8px;
+}
+
+.class__footer-body{
+	padding-top: 20px;
+	font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
