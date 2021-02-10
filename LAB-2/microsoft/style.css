@@ -69,6 +69,7 @@
 }
 
 .slide__img{
+	z-index: 0;
 }
 
 .slide__container{
@@ -76,13 +77,15 @@
 	padding-left: 5%;
 	padding-right: 5%;
 }
+.class__news{
+	float: left;
+	overflow: hidden;
+}
 
-.slide__information{
-	padding-bottom: 100px;
-	z-index: 5;
+.news__text{
+	padding-right: 12px;
 }
-.slide__text{
-	z-index: 10;
-}
+
+
 
 
