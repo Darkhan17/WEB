@@ -1,0 +1,64 @@
+body{
+	background-color:#edf0f5;
+	min-height: 100vh;
+}
+
+header,form{
+	min-height: 20vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form button, form input {
+	font-size: 20px;
+	padding:0.5em;
+}
+
+.todo__container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo__list{
+	width: 50%;
+	list-style: none;
+}
+
+
+.todo{
+	margin: 2em;
+	background-color: white;
+	color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+.todo li{
+	flex:1;
+}
+
+.todo__delete, .todo__done{
+	background-color: #1877f2;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.todo__item{
+	padding: 0em,0.5em;
+
+}
+.completed{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.todo__delete, .todo__done{
+	pointer-events: none;
+}
+
