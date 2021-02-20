@@ -2,6 +2,8 @@
 const todoInput = document.querySelector(".todo__input");
 const todoButton = document.querySelector(".todo__add");
 const todoList = document.querySelector(".todo__list");
+const todoClear = document.querySelector(".todo__clear");
+const todoDoneAll = document.querySelector(".todo__done-all");
 
 function addTodo(event){
 	event.preventDefault();
@@ -9,6 +11,7 @@ function addTodo(event){
 
 	const todoContainer = document.createElement("div");
 	todoContainer.classList.add("todo");
+
 
 	const newTodo = document.createElement("li");
 	newTodo.innerText = todoInput.value;
@@ -44,14 +47,35 @@ function deleteDone(e){
 		const todo = item.parentElement;
 		todo.classList.toggle("completed");
 	}
-
-
 }
+
+
+function doneAll(event){
+	event.preventDefault();
+	 var dives = document.getElementsByClassName("todo")
+        for (var i = 0; i < dives.length; i++){
+            dives[i].classList.toggle("completed");
+        }
+}
+
+
+function clearAll(event){
+	event.preventDefault();
+	 var dives = document.getElementsByClassName("todo")
+        for (var i = 0; i < dives.length; i++){
+            dives[i].remove();
+        }
+	}
+
+
+
 
 
 
 
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteDone);
+todoClear.addEventListener("click", clearAll);
+todoDoneAll.addEventListener("click", doneAll);
 
 
