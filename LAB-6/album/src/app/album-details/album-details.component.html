@@ -1,0 +1,5 @@
+<div *ngIf="loaded">
+<p> {{album.id}}) {{ album.title}} </p>
+  <button (click)="goBack()"> GO back </button>
+</div>
+<p *ngIf="!loaded"> Loading album</p>

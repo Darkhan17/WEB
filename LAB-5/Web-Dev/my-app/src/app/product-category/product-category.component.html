@@ -6,9 +6,11 @@
 <div *ngFor="let category of categories">
   <h3>
 
-  <a [title] = "category.name" [routerLink]="['/product-list',category.id]">
+  <a [title] = "category.name" (click)="setCategory(category)">
   {{category.name}}
   </a>
   </h3>
-
 </div>
+<app-product-list [category]= category>
+</app-product-list>
+

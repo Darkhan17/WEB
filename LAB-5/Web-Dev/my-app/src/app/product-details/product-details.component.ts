@@ -12,20 +12,25 @@ import { CartService } from '../cart.service';
 
 
 export class ProductDetailsComponent implements OnInit {
+  constructor( private route: ActivatedRoute,
+               private cartService: CartService) { }
+  products = products;
 
-  addToCart(product) {
+  product;
+  addToCart(product): void {
     this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart!');
   }
 
-  like(product){
+  like(product): void{
     product.like = product.like + 1;
   }
 
-  product;
-  constructor( private route: ActivatedRoute,
-                private cartService: CartService) { }
+  remove(id): void{
+  this.products = this.products.filter((x) => x.id !== id);
+  }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
   const routeParams = this.route.snapshot.paramMap;
   const productIdFromRoute = Number(routeParams.get('productId'));

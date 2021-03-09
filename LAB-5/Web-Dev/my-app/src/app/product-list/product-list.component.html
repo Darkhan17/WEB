@@ -14,7 +14,7 @@
 	<button (click)="share(product.fb)" >
   Share
   </button>
-
+  <button (click)="removeItem(product.id)"> Delete </button>
 
 	<app-product-alerts [product]="product" (notify)="onNotify()">
 	</app-product-alerts>

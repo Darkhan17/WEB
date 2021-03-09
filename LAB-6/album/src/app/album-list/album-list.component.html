@@ -1,0 +1,11 @@
+<p>album-list works!</p>
+<ul *ngIf="loaded">
+  <li *ngFor=" let album of albums">
+    <a [routerLink]= "['/albums',album.id]">
+       {{album.id}}) {{album.title}}
+    </a>
+    <button (click)="deleteAlbum(album.id)"> Delete</button>
+  </li>
+</ul>
+
+<p *ngIf="!loaded"> Loading page</p>

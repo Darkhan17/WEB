@@ -4,7 +4,6 @@ import { categories } from '../categories';
 
 
 
-
 @Component({
   selector : 'app-product-category' ,
   templateUrl : './product-category.component.html',
@@ -14,6 +13,11 @@ import { categories } from '../categories';
 
 export class ProductCategoryComponent{
   categories = categories;
+  category;
+
+  setCategory(category): void{
+    this.category = category;
+  }
 }
 
 

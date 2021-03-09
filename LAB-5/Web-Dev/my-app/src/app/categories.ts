@@ -1,14 +1,14 @@
 export const categories = [{
     id: 1,
-    name : 'Iphones',
+    name : 'Cameras',
   },
   {
     id: 2,
-    name : 'Notebooks',
+    name : 'Headphones',
   },
   {
     id: 3,
-    name : 'TV',
+    name : 'Computers',
   },
   {
     id: 4,

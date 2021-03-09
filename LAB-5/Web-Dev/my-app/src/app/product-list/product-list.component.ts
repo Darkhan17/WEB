@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 import { products } from '../products';
 import {categories} from '../categories';
@@ -15,11 +15,12 @@ import { ActivatedRoute } from '@angular/router';
 
 
 export class ProductListComponent implements OnInit{
-  products = products;
+  @Input()category;
+  @Output() remove = EventEmitter;
   categories = categories;
-
+  // tslint:disable-next-line:triple-equals
+  products = products;
   constructor( private route: ActivatedRoute) { }
-  category;
   // tslint:disable-next-line:typedef
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
@@ -36,6 +37,10 @@ export class ProductListComponent implements OnInit{
   // tslint:disable-next-line:typedef
   onNotify() {
     window.alert('You will be notified when the product goes on sale');
+  }
+
+  removeItem(index){
+    this.products = this.products.filter(x => x.id !== index);
   }
 
 
