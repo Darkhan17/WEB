@@ -1,0 +1,5 @@
+<p>photos works!</p>
+<ul *ngFor="let photo of photos">
+  <li> {{photo.id}}, {{photo.title}}, {{photo.albumId}} </li>
+  <img src="{{photo.thumbnailUrl}}">
+</ul>

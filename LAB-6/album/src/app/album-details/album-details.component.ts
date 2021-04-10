@@ -38,4 +38,12 @@ export class AlbumDetailsComponent implements OnInit {
   goBack(){
     this.location.back();
   }
+  // tslint:disable-next-line:typedef
+  updateAlbum(){
+    this.albumService.updateAlbum(this.album).subscribe((album) => {
+      console.log(album);
+      this.loaded = true;
+    });
+  }
+
 }

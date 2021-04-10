@@ -11,8 +11,10 @@ import {AlbumsService} from '../albums.service';
 export class AlbumListComponent implements OnInit {
   albums: Album[] = [];
   loaded!: boolean;
-  constructor(private albumService: AlbumsService) { }
-
+  newAlbum!: string;
+  constructor(private albumService: AlbumsService) {
+    this.newAlbum = '';
+  }
   ngOnInit(): void {
     this.getAlbums();
   }
@@ -31,6 +33,19 @@ export class AlbumListComponent implements OnInit {
     this.albums = this.albums.filter((x) => x.id !== id);
     this.albumService.delete(id).subscribe(() => {
       console.log( id , 'deleted');
+    });
+  }
+
+  addAlbum(): void{
+    const album = {
+      title : this.newAlbum
+    };
+    this.loaded = false;
+    this.albumService.addAlbum(album as Album).subscribe((album) => {
+      console.log(album);
+      this.albums.push(album);
+      this.newAlbum = '';
+      this.loaded = true;
     });
   }
 
